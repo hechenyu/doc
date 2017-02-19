@@ -1,0 +1,98 @@
+"创建一个目录, Vim插件下载后将安装到该目录下. 
+"默认情况下, 该目录位于~/.vim/bundle
+"$ mkdir -p ~/.vim/bundle
+
+"现在安装Vundle, 如下所示.
+"请注意:Vundle本身是另一种Vim插件.
+"因而, 我们将Vundle安装在之前创建的~/.vim/bundle下。
+
+set nocompatible              " 这是必需的 
+filetype off                  " 这是必需的 
+  
+" 你在此设置运行时路径 
+set rtp+=~/.vim/bundle/Vundle.vim  
+ 
+" vundle初始化 
+call vundle#begin()  
+ 
+" 这应该始终是第一个 
+Plugin 'gmarik/Vundle.vim' 
+ 
+" 该例子来自https://github.com/gmarik/Vundle.vim README 
+Plugin 'tpope/vim-fugitive'  
+ 
+" 来自http://vim-scripts.org/vim/scripts.html的插件 
+Plugin 'L9'  
+ 
+"未托管在GitHub上的Git插件 
+Plugin 'git://git.wincent.com/command-t.git'  
+ 
+"本地机器上的git软件库（即编写自己的插件时） 
+Plugin 'file:///home/gmarik/path/to/plugin'  
+ 
+" sparkup vim脚本在名为vim的该软件库子目录下。 
+" 传递路径，合理设置运行时路径。 
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'} 
+ 
+" 与L9避免名称冲突 
+Plugin 'user/L9', {'name': 'newL9'}  
+ 
+" Tagbar配置, 首先要安装Tagbar: 
+" :BundleInstall Tagbar
+Bundle 'Tagbar'
+let g:tagbar_ctags_bin='ctags'
+let g:tagbar_width=20
+let g:tagbar_left=1
+"let g:tagbar_right=1
+"autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
+nmap tb :TagbarToggle<cr>
+
+" NERDTree配置, 首先要安装NERDTree: 
+" :BundleInstall The-NERD-tree
+" :BundleInstall The-NERD-Commenter
+Bundle 'The-NERD-tree'
+Bundle 'The-NERD-Commenter'
+let NERDTreeWinPos='right'
+let NERDTreeShowBookmarks=1
+let NERDTreeWinSize=20
+nmap nt :NERDTreeToggle<cr>
+
+nmap tt tbnt
+
+" MiniBufExplorer配置, 首先要安装MiniBufExplorer
+" :BundleInstall 'minibufexpl.vim'
+Bundle 'minibufexpl.vim'
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplForceSyntaxEnable = 1
+let g:miniBufExplorerMoreThanOne=2
+
+"每个插件都应该在这一行之前  
+call vundle#end()            " required
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+set nobackup		" do not keep a backup file, use versions instead
+set history=50		" keep 50 lines of command line history
+set ruler		" show the cursor position all the time
+set showcmd		" display incomplete commands
+set incsearch		" do incremental searching
+
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+set expandtab
+
+set encoding=utf-8
+set termencoding=utf-8
+set fileencodings=utf-8,gbk,gb18030,gb2312
+
