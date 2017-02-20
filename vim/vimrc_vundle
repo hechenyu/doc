@@ -1,10 +1,11 @@
-"创建一个目录, Vim插件下载后将安装到该目录下. 
-"默认情况下, 该目录位于~/.vim/bundle
-"$ mkdir -p ~/.vim/bundle
+" 创建一个目录, Vim插件下载后将安装到该目录下. 
+" 默认情况下, 该目录位于~/.vim/bundle
+" $ mkdir -p ~/.vim/bundle
 
-"现在安装Vundle, 如下所示.
-"请注意:Vundle本身是另一种Vim插件.
-"因而, 我们将Vundle安装在之前创建的~/.vim/bundle下。
+" 现在安装Vundle, 如下所示.
+" 请注意:Vundle本身是另一种Vim插件.
+" 因而, 我们将Vundle安装在之前创建的~/.vim/bundle下。
+" $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 set nocompatible              " 这是必需的 
 filetype off                  " 这是必需的 
@@ -24,10 +25,10 @@ Plugin 'tpope/vim-fugitive'
 " 来自http://vim-scripts.org/vim/scripts.html的插件 
 Plugin 'L9'  
  
-"未托管在GitHub上的Git插件 
+" 未托管在GitHub上的Git插件 
 Plugin 'git://git.wincent.com/command-t.git'  
  
-"本地机器上的git软件库（即编写自己的插件时） 
+" 本地机器上的git软件库（即编写自己的插件时） 
 Plugin 'file:///home/gmarik/path/to/plugin'  
  
 " sparkup vim脚本在名为vim的该软件库子目录下。 
@@ -67,7 +68,7 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplForceSyntaxEnable = 1
 let g:miniBufExplorerMoreThanOne=2
 
-"每个插件都应该在这一行之前  
+" 每个插件都应该在这一行之前  
 call vundle#end()            " required
 
 " allow backspacing over everything in insert mode
