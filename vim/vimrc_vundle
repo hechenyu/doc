@@ -70,12 +70,13 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+" 缩进设置
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-
 set expandtab
 
+" 文件编码
 set encoding=utf-8
 set termencoding=utf-8
 set fileencodings=utf-8,gbk,gb18030,gb2312
