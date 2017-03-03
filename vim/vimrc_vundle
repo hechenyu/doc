@@ -54,6 +54,15 @@ let g:miniBufExplorerMoreThanOne=2
 " 每个插件都应该在这一行之前  
 call vundle#end()            " required
 
+" Enable file type detection.
+" Use the default filetype settings, so that mail gets 'tw' set to 72,
+" 'cindent' is on in C files, etc.
+" Also load indent files, to automatically do language-dependent indenting.
+" Revert with ":filetype off".
+filetype plugin indent on
+
+set autoindent		" always set autoindenting on
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -83,3 +92,4 @@ set fileencodings=utf-8,gbk,gb18030,gb2312
 
 " 配色方案
 colorscheme desert
+
