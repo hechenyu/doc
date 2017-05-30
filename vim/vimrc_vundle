@@ -61,8 +61,6 @@ call vundle#end()            " required
 " Revert with ":filetype off".
 filetype plugin indent on
 
-set autoindent		" always set autoindenting on
-
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -80,6 +78,9 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 " 缩进设置
+set cindent " C语法缩进
+" set autoindent " 自动缩进
+" set smartindent " 自动缩进
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -98,3 +99,8 @@ set number
 
 " 显示折叠的线索
 set foldcolumn=5
+set foldenable
+set foldmethod=syntax " 手动折叠
+" set foldmethod=indent " 按缩进折叠
+" set foldmethod=manual " 手动折叠
+
