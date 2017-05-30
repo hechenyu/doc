@@ -93,3 +93,8 @@ set fileencodings=utf-8,gbk,gb18030,gb2312
 " 配色方案
 colorscheme desert
 
+" 显示行号
+set number
+
+" 显示折叠的线索
+set foldcolumn=5
