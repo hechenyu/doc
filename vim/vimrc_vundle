@@ -95,11 +95,16 @@ set fileencodings=utf-8,gbk,gb18030,gb2312
 colorscheme desert
 
 " 显示行号
-set number
+" set number
+
+" 显示行列光标高亮
+" set cursorline
+" set cursorcolumn
 
 " 显示折叠的线索
-set foldcolumn=5
+" set foldcolumn=5
 set foldenable
+set foldlevel=100
 set foldmethod=syntax " 手动折叠
 " set foldmethod=indent " 按缩进折叠
 " set foldmethod=manual " 手动折叠
